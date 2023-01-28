@@ -49,8 +49,8 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Blog
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="note" spy={true} smooth={true} offset={-80}>
+                Notes
               </Link>
             </li>
             <li className="semiBold font15 pointer">

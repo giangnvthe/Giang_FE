@@ -4,7 +4,7 @@ import styled from "styled-components";
 import FullButton from "../Buttons/FullButton";
 // Assets
 import RollerIcon from "../../assets/svg/Services/PhoneIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
+import FolderIcon from "../../assets/svg/Services/FolderIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/BoxIcon";
 import CheckMark from "../../assets/svg/Checkmark";
@@ -17,7 +17,7 @@ export default function PricingTable({ icon, price, title, text,  offers, action
       getIcon = <RollerIcon />;
       break;
     case "monitor":
-      getIcon = <MonitorIcon />;
+      getIcon = <FolderIcon />;
       break;
     case "browser":
       getIcon = <BrowserIcon />;

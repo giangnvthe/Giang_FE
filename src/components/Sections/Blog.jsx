@@ -1,25 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import BlogBox from "../Elements/BlogBox";
+import NoteBox from "../Elements/NoteBox";
 import FullButton from "../Buttons/FullButton";
 
 export default function Blog() {
   return (
-    <Wrapper id="blog">
+    <Wrapper id="note">
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Blog Stories</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            <h1 className="font40 extraBold">All Your Notes</h1>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
@@ -28,7 +23,7 @@ export default function Blog() {
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
@@ -37,7 +32,7 @@ export default function Blog() {
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
@@ -48,7 +43,7 @@ export default function Blog() {
           </div>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
@@ -57,7 +52,7 @@ export default function Blog() {
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
@@ -66,7 +61,7 @@ export default function Blog() {
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-              <BlogBox
+              <NoteBox
                 title="New Office!"
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"

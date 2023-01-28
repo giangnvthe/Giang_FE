@@ -28,7 +28,7 @@ export default function Services() {
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
+                icon="folder"
                 title="Collaboration"
                 subtitle="Work simultaneously in the same document with the whole class or connect face-to-face with Meet."
               />
