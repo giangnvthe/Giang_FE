@@ -21,15 +21,15 @@ const mockData = [
         tasks: [
             {
                 id: uuid(),
-                title: 'Developing frontend',    
+                title: 'Developing frontend',
             },
             {
                 id: uuid(),
-                title: 'Creating report 2',    
+                title: 'Creating report 2',
             },
             {
                 id: uuid(),
-                title: 'Creating report 3',    
+                title: 'Creating report 3',
             },
         ]
     },
@@ -37,13 +37,11 @@ const mockData = [
         id: uuid(),
         title: 'Done',
         tasks: [
-            
         ]
     }
 ];
 
 export default function Kanban() {
-    
     const [data, setData] = useState(mockData);
 
     const onDragEnd = result => {
@@ -75,31 +73,31 @@ export default function Kanban() {
 
     return (
         <Wrapper id='tasks'>
-        <h1>Kanban UI</h1>
-        <DragDropContext onDragEnd={onDragEnd}>
-            <KanbanBoard >
-                {
-                    data.map(section => (
-                        <Droppable
-                            key={section.id}
-                            droppableId={section.id}
-                        >
-                            {(provided) => (
-                                <BoardSection
-                                    ref={provided.innerRef}
-                                    {...provided.droppableProps}
-                                >
-                                    <SectionTitle>{section.title}</SectionTitle>
-                                    <SectionContent>
-                                        {
-                                            section.tasks.map((task, index) => (
-                                                <Draggable
-                                                    key={task.id}
-                                                    draggableId={task.id}
-                                                    index={index}
-                                                >
-                                                    {(provided, snapshot) => (
-                                                            <div 
+            <h1>Kanban UI</h1>
+            <DragDropContext onDragEnd={onDragEnd}>
+                <KanbanBoard >
+                    {
+                        data.map(section => (
+                            <Droppable
+                                key={section.id}
+                                droppableId={section.id}
+                            >
+                                {(provided) => (
+                                    <BoardSection
+                                        ref={provided.innerRef}
+                                        {...provided.droppableProps}
+                                    >
+                                        <SectionTitle>{section.title}</SectionTitle>
+                                        <SectionContent>
+                                            {
+                                                section.tasks.map((task, index) => (
+                                                    <Draggable
+                                                        key={task.id}
+                                                        draggableId={task.id}
+                                                        index={index}
+                                                    >
+                                                        {(provided, snapshot) => (
+                                                            <div
                                                                 ref={provided.innerRef}
                                                                 {...provided.draggableProps}
                                                                 {...provided.dragHandleProps}
@@ -112,19 +110,19 @@ export default function Kanban() {
                                                                     {task.title}
                                                                 </Card>
                                                             </div>
-                                                    )}
-                                                </Draggable>                                       
+                                                        )}
+                                                    </Draggable>
                                                 ))
-                                        }
-                                        {provided.placeholder}
+                                            }
+                                            {provided.placeholder}
                                         </SectionContent>
-                                </BoardSection>
-                            )}
-                        </Droppable>
-                    ))
-                }
-            </KanbanBoard>
-        </DragDropContext>
+                                    </BoardSection>
+                                )}
+                            </Droppable>
+                        ))
+                    }
+                </KanbanBoard>
+            </DragDropContext>
         </Wrapper>
     )
 }
