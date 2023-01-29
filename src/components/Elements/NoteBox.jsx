@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function BlogBox({ tag, title, text, action, author }) {
+export default function NoteBox({ tag, title, text, action, author }) {
   return (
     <WrapperBtn className="animate pointer" onClick={action ? () => action() : null}>
       <Wrapper className="whiteBg radius8 shadow">

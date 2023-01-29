@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
+
 // Assets
 import HomeImage from "../../assets/img/home-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
@@ -41,6 +42,7 @@ export default function Header() {
         </ImageWrapper>
         <GreyDiv className="lightBg"></GreyDiv>
       </RightSide>
+
     </Wrapper>
   );
 }

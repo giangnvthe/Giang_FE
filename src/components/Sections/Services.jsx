@@ -21,14 +21,14 @@ export default function Services() {
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
+                icon="boy"
                 title="Easy to use"
-                subtitle="Everybody can get up and running our app in minutes."
+                subtitle=" &#34;It's as easy as pie.&#34;  Everybody can get up and running our app in minutes."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
+                icon="folder"
                 title="Collaboration"
                 subtitle="Work simultaneously in the same document with the whole class or connect face-to-face with Meet."
               />
@@ -62,6 +62,7 @@ const ServiceBoxWrapper = styled.div`
   padding: 80px 0;
   @media (max-width: 860px) {
     width: 100%;
+    margin-left: 0px;
     text-align: center;
     padding: 40px 0;
   }

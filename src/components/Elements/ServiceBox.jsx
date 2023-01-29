@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 // Assets
 import PhoneIcon from "../../assets/svg/Services/PhoneIcon";
-import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
-import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
+import FolderIcon from "../../assets/svg/Services/FolderIcon";
 import BoxIcon from "../../assets/svg/Services/BoxIcon";
+import BoyIcon from "../../assets/svg/Services/BoyIcon";
+
 
 export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
@@ -13,11 +14,11 @@ export default function ServiceBox({icon, title, subtitle}) {
     case "box":
       getIcon = <BoxIcon />;
       break;
-    case "monitor":
-      getIcon = <MonitorIcon />;
+    case "boy":
+      getIcon = <BoyIcon />;
       break;
-    case "browser":
-      getIcon = <BrowserIcon />;
+    case "folder":
+      getIcon = <FolderIcon />;
       break;
     case "phone":
       getIcon = <PhoneIcon />;
