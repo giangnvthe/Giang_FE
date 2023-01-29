@@ -80,8 +80,8 @@ export default function TopNavbar() {
             </li>
             <li className="semiBold pointer flexCenter">
 
-              <RouterLink to="/login">
-                <FullButton title="Sign Up" />
+              <RouterLink to="/task">
+                <FullButton title="Task" />
               </RouterLink>
 
               {/* <FullButton title="Get Started" action={() => alert("clicked")} /> */}
