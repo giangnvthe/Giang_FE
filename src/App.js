@@ -17,7 +17,6 @@ import TaskManagement from "./screens/TaskManagement.jsx";
 export default function App() {
   return (
     <>
-      <TaskManagement />
       <Router>
         <Switch>
 

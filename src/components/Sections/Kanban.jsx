@@ -144,6 +144,7 @@ const BoardSection = styled.div`
     background-color: #383838;
     padding: 10px;
     border-radius: 10px;
+    margin: 10px;
 `
 
 const SectionTitle = styled.div`
@@ -159,4 +160,5 @@ const Card = styled.div`
     padding: 30px;
     background-color: #212121;
     border-radius: 10px;
+    margin-top: 10px;
 `

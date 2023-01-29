@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../style/login.css'
 import { Link as RouterLink } from "react-router-dom";
-
+import axios from "axios";
 
 import FullButton from "../components/Buttons/FullButton";
 import AuthenNavbar from "../components/Nav/AuthenNavbar"
@@ -36,7 +36,17 @@ export default function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
+
+    axios.post('http://localhost:8080/login', {
+      'username' : email,
+      'password' : pass
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   return (
