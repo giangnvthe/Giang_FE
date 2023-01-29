@@ -1,22 +1,51 @@
 import React from "react";
-
+import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
 
 
 export default function Login() {
+  
   return (
-    <form action="#" class="sign-in-form">
-      <h2 class="title">Sign in</h2>
-      <div class="input-field">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Username" />
+    <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+
+    <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+    <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+
+    <div className="d-flex justify-content-between mx-3 mb-4">
+      <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+      <a href="!#">Forgot password?</a>
+    </div>
+
+    <MDBBtn className="mb-4">Sign in</MDBBtn>
+
+    <div className="text-center">
+      <p>Not a member? <a href="#!">Register</a></p>
+      <p>or sign up with:</p>
+
+      <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
+        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+          <MDBIcon fab icon='facebook-f' size="sm"/>
+        </MDBBtn>
+
+        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+          <MDBIcon fab icon='twitter' size="sm"/>
+        </MDBBtn>
+
+        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+          <MDBIcon fab icon='google' size="sm"/>
+        </MDBBtn>
+
+        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+          <MDBIcon fab icon='github' size="sm"/>
+        </MDBBtn>
+
       </div>
-      <div class="input-field">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" />
-      </div>
-      <input type="submit" value="Login" class="btn solid" />
-    </form>
-  );
+    </div>
+
+  </MDBContainer>
+  )
 }
+
+
+
 
 
