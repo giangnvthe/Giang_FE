@@ -12,5 +12,5 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 99;
-  opacity: 0.8;
+  opacity: ;
 `;

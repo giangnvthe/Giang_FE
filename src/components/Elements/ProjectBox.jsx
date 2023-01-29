@@ -1,37 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function ProjectBox({ img, title, text, action}) {
+export default function ProjectBox({ img, title, action }) {
   return (
-    <Wrapper>
-      <ImgBtn className="aniamte pointer" onClick={action ? () => action() : null}>
-        <img className="radius8" src={img} alt="project"></img>
-      </ImgBtn>
-      <h3 className="font20 extraBold">{title}</h3>
-      <p className="font13">{text}</p>
-    </Wrapper>
+
+    <ImgBtn className="aniamte pointer" onClick={action ? () => action() : null}>
+      <div style={{
+        backgroundImage: `url(${img})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minWidth: '300px',
+        minHeight: '200px',
+        margin: '20px 0',
+        borderRadius: '10px'
+
+      }}>
+        <h3 className="font20 extraBold" style={{
+          paddingTop: '40px'
+        }}>{title}</h3>
+      </div>
+    </ImgBtn>
+
+
   );
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  margin-top: 30px;
-  img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-  }
-  h3 {
-    padding-bottom: 10px;
-  }
-`;
+
 const ImgBtn = styled.button`
   background-color: transparent;
   border: 0px;
   outline: none;
   padding: 0px;
   margin: 0px;
-  :hover > img {
+  :hover > div {
     opacity: 0.5;
   }
 `;

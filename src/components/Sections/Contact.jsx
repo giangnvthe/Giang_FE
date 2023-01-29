@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <Wrapper id="contact">
       <div className="lightBg">
-        <div className="container">
+        <div className="container" style={{  height: '800px'}}>
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
           </HeaderInfo>

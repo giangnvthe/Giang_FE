@@ -4,6 +4,8 @@ import styled from "styled-components";
 import PhoneIcon from "../../assets/svg/Services/PhoneIcon";
 import FolderIcon from "../../assets/svg/Services/FolderIcon";
 import BoxIcon from "../../assets/svg/Services/BoxIcon";
+import BoyIcon from "../../assets/svg/Services/BoyIcon";
+
 
 export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
@@ -12,8 +14,8 @@ export default function ServiceBox({icon, title, subtitle}) {
     case "box":
       getIcon = <BoxIcon />;
       break;
-    case "folder":
-      getIcon = <FolderIcon />;
+    case "boy":
+      getIcon = <BoyIcon />;
       break;
     case "folder":
       getIcon = <FolderIcon />;
