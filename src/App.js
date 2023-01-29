@@ -16,10 +16,6 @@ import {
 export default function App() {
   return (
     <>
-<<<<<<< Updated upstream
-=======
-    
->>>>>>> Stashed changes
       <Router>
         <Switch>
 
