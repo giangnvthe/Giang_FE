@@ -4,6 +4,7 @@ import React from "react";
 //import Landing from "./screens/Landing.jsx";
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
+import Register  from "./screens/Register.jsx";
 
 //Library
 import {
@@ -29,11 +30,18 @@ export default function App() {
             <Login />
           </Route>
 
+          {/* Register */}
+          <Route path="/register">
+            <Register />
+          </Route>
+
+
           {/* Landing */}
-          <Route path="/">
+          <Route exact path="/">
             <Landing />
           </Route>
 
+          
         </Switch>
       </Router>
     </>

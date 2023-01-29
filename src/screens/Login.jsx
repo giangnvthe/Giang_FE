@@ -64,7 +64,11 @@ export default function Login(props) {
             <FullButton title="Get Started" />
 
           </form>
-          <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button>
+          <RouterLink to="/register">
+            <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button>
+                
+              </RouterLink>
+          {/* <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button> */}
         </div>
       </div>
     </>
