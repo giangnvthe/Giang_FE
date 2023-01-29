@@ -20,6 +20,10 @@ export default function App() {
         <Switch>
 
           {/* Login */}
+          <Route path="/task">
+            <TaskManagement />
+          </Route>
+
           <Route path="/login">
             <Login />
           </Route>
