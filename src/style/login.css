@@ -15,7 +15,7 @@
   border-radius: 20px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 100px) {
   .auth-form-container {
     padding: 3.5rem;
     border: 1px solid white;
