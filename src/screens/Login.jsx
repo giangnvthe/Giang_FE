@@ -38,35 +38,36 @@ export default function Login(props) {
     e.preventDefault();
 
     axios.post('http://localhost:8080/login', {
-      'username' : email,
-      'password' : pass
+      'username': email,
+      'password': pass
     })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
     <>
       <AuthenNavbar></AuthenNavbar>
       <div className="Wrapper">
-        <div className="auth-form-container">
-          <h2>Login</h2>
-          <form className="login-form" onSubmit={handleSubmit}>
-            <label className="semiBold" htmlFor="email">Email</label>
-            <input id="email" className="input" type="email" placeholder="email" value={email} onChange={handleOnChange} />
+        <div className="auth-form-container" style={{ marginTop: "100px"
+}}>
+        <h2>Login</h2>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label className="semiBold" htmlFor="email">Email</label>
+          <input id="email" className="input" type="email" placeholder="email" value={email} onChange={handleOnChange} />
 
-            <label className="semiBold " htmlFor="password">Password</label>
-            <input className="marginBot" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <FullButton title="Get Started" />
+          <label className="semiBold " htmlFor="password">Password</label>
+          <input className="marginBot" value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+          <FullButton title="Get Started" />
 
-          </form>
-          <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button>
-        </div>
+        </form>
+        <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button>
       </div>
+    </div>
     </>
   )
 }
