@@ -49,27 +49,28 @@ export default function Login(props) {
       'username' : values.email,
       'password' : values.pass
     })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
     <>
       <AuthenNavbar></AuthenNavbar>
       <div className="Wrapper">
-        <div className="auth-form-container">
-          <h2>Login</h2>
-          <form className="login-form" onSubmit={handleSubmit}>
-            <label className="semiBold" htmlFor="email">Email</label>
-            <input id="email" name="email" className="input" type="email" placeholder="email" value={values.email} onChange={handleOnChange} />
+        <div className="auth-form-container" style={{ marginTop: "100px"
+}}>
+        <h2>Login</h2>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label className="semiBold" htmlFor="email">Email</label>
+          <input id="email" name="email" className="input" type="email" placeholder="email" value={values.email} onChange={handleOnChange} />
 
-            <label className="semiBold " htmlFor="password">Password</label>
-            <input id="password" name="password" className="marginBot"  type="password" value={values.password} onChange={handleOnChange}  placeholder="********"  />
-            <FullButton title="Get Started" />
+          <label className="semiBold " htmlFor="password">Password</label>
+          <input id="password" name="password" className="marginBot"  type="password" value={values.password} onChange={handleOnChange}  placeholder="********"  />
+          <FullButton title="Get Started" />
 
           </form>
           <RouterLink to="/register">
