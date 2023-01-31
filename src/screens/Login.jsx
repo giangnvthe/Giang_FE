@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../style/login.css'
+import '../style/authen.css'
 import { Link as RouterLink } from "react-router-dom";
 import axios from "axios";
 
@@ -74,7 +74,7 @@ export default function Login(props) {
 
           </form>
           <RouterLink to="/register">
-            <button className="link-btn " onClick={() => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button>
+            <button className="link-btn " >Don't have an account?  <span className="semiBold"> Register here.</span></button>
                 
               </RouterLink>
           {/* <button className="link-btn " onClick={(emailValidation) => props.onFormSwitch('register')}>Don't have an account?  <span className="semiBold"> Register here.</span></button> */}

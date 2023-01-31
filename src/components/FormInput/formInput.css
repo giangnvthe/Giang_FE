@@ -1,7 +1,0 @@
-span{
-    color: red;
-    display: none;
-}
-input:invalid[focused="true"] ~ span{
-    display: block;
-}

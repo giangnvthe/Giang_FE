@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import styled from "styled-components";
-import "./formInput.css";  
+import '../../style/authen.css'
+
 const FormInput = (props) =>{
     const [focused,setFocused] = useState(false);
     const {label,errorMessage,onChange,id, ...inputProps} = props;
@@ -11,12 +11,12 @@ const FormInput = (props) =>{
     };
 
     return (
-        <div className="formInput">
-            <label>{label}</label>
+        <>
+            <label className="semiBold">{label}</label>
             <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused={focused.toString()}/>
-            <span >{errorMessage}</span>
-        </div>
+            <span className="spanError" >{errorMessage}</span>
+        </>
     );
 };
 
-export default FormInput
+export default FormInput;
