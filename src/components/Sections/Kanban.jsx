@@ -17,7 +17,7 @@ const mockData = [
     },
     {
         id: uuid(),
-        title: 'In Progress',
+        title: 'In progress',
         tasks: [
             {
                 id: uuid(),
@@ -88,6 +88,7 @@ export default function Kanban() {
                                         {...provided.droppableProps}
                                     >
                                         <SectionTitle>{section.title}</SectionTitle>
+                                       
                                         <SectionContent>
                                             {
                                                 section.tasks.map((task, index) => (
@@ -128,8 +129,7 @@ export default function Kanban() {
 }
 
 const Wrapper = styled.section`
-  background-color: #212121;
-  color: #E4E4E4;
+  color: #716F81;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
 `;
@@ -141,7 +141,7 @@ const KanbanBoard = styled.div`
 
 const BoardSection = styled.div`
     width: 400px;
-    background-color: #383838;
+    background-color: #F5B17B;
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
@@ -150,6 +150,9 @@ const BoardSection = styled.div`
 const SectionTitle = styled.div`
     font-size: 1.2rem;
     margin: 10px 0 20px;
+    color: #434242;
+    font-weight: bold;
+
 `
 
 const SectionContent = styled.div`
@@ -158,7 +161,7 @@ const SectionContent = styled.div`
 
 const Card = styled.div`
     padding: 30px;
-    background-color: #212121;
+    background-color: #F2EEE5;
     border-radius: 10px;
     margin-top: 10px;
 `

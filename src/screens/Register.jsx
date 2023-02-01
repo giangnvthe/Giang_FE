@@ -78,7 +78,7 @@ export default function Register(props) {
         <>
             <AuthenNavbar></AuthenNavbar>
             <div className="Wrapper">
-                <div className="auth-form-container">
+                <div className="auth-form-container" style={{maxHeight: "900px"}}>
                     <h2>Register</h2>
                     <form className="register-form" onSubmit={handleSubmit} >
                         {inputs.map((input) => (
@@ -89,6 +89,7 @@ export default function Register(props) {
                                 onChange={onChange}
                             />
                         ))}
+                        <div className="marginBot"></div>
                         <FullButton title={"Register"} />
 
                     </form>

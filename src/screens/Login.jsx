@@ -60,9 +60,8 @@ export default function Login(props) {
   return (
     <>
       <AuthenNavbar></AuthenNavbar>
-      <div className="Wrapper">
-        <div className="auth-form-container" style={{ marginTop: "100px"
-}}>
+      <div className="Wrapper" >
+        <div className="auth-form-container" >
         <h2>Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
           <label className="semiBold" htmlFor="email">Email</label>
