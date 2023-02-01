@@ -1,12 +1,25 @@
 import Kanban from "../components/Sections/Kanban";
-import Header from "../components/Sections/Header";
-import Footer from "../components/Sections/Footer";
+import Sidebar from "../components/Nav/Sidebar";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+
+
 
 export default function TaskManagement() {
-    return (
-      <>
-        {/* <Header />  */}
-        <Kanban/>
-      </>
-    );
-  }
+  return (
+    <Router>
+      <Sidebar>
+        <Switch>
+         {/* Task */}
+         <Route path="/task">
+            <Kanban />
+          </Route>
+        </Switch>
+      </Sidebar>
+    </Router>
+  );
+}

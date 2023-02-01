@@ -1,155 +1,78 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-scroll";
+import React, { useState } from 'react';
+import {
+    FaTh,
+    FaBars,
+    FaUserAlt,
+    FaRegChartBar,
+    FaCommentAlt,
+    FaShoppingBag,
+    FaThList
+} from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
 import { Link as RouterLink } from "react-router-dom";
+import Font from '../Font/Font';
+
 // Assets
-import CloseIcon from "../../assets/svg/CloseIcon";
 import LogoIcon from "../../assets/svg/Logo";
 
-export default function Sidebar({ sidebarOpen, toggleSidebar }) {
-  return (
-    <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
-      <SidebarHeader className="flexSpaceCenter">
-        <div className="flexNullCenter">
-          <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
-          </h1>
+const Sidebar = ({ children }) => {
+    const menuItem = [
+        {
+            path: "/task",
+            name: "Tasks",
+            icon: <FaTh />
+        },
+        {
+            path: "/about",
+            name: "About",
+            icon: <FaUserAlt />
+        },
+        {
+            path: "/analytics",
+            name: "Analytics",
+            icon: <FaRegChartBar />
+        },
+        {
+            path: "/comment",
+            name: "Comment",
+            icon: <FaCommentAlt />
+        },
+        {
+            path: "/product",
+            name: "Product",
+            icon: <FaShoppingBag />
+        },
+        {
+            path: "/productList",
+            name: "Product List",
+            icon: <FaThList />
+        }
+    ]
+    return (
+        <>     <Font />
+        <div className="sidebarContainer">
+            <div style={{ width: "250px" }} className="sidebar_sidebar">
+                <div className="sidebar_top_section">
+                    <RouterLink className="pointer flexNullCenter" to="/">
+                        <LogoIcon />
+                        <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+                            FollabiJ
+                        </h1>
+                    </RouterLink>
+                </div>
+                {
+                    menuItem.map((item, index) => (
+                        <NavLink to={item.path} key={index} className="sidebar_link" activeClassName='sidebar_active'>
+                            <div className="sidebar_icon">{item.icon}</div>
+                            <div style={{ display:  "block"}} className="sidebar_link_text">{item.name}</div>
+                        </NavLink>
+                    ))
+                }
+            </div>
+            <main>{children}</main>
         </div>
-        <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
-          <CloseIcon />
-        </CloseBtn>
-      </SidebarHeader>
+        </>
+    );
+};
 
-      <UlStyle className="flexNullCenter flexColumn">
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="services"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Services
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="blog"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Blog
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="pricing"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Pricing
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Contact
-          </Link>
-        </li>
-    
-        <li className="semiBold font15 pointer">
-          <RouterLink
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="login"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Login
-          </RouterLink>
-        </li>
-      </UlStyle>
-    </Wrapper>
-  );
-}
-
-const Wrapper = styled.nav`
-  width: 400px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  padding: 0 30px;
-  right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
-  z-index: 9999;
-  @media (max-width: 400px) {
-    width: 100%;
-  }
-`;
-const SidebarHeader = styled.div`
-  padding: 20px 0;
-`;
-const CloseBtn = styled.button`
-  border: 0px;
-  outline: none;
-  background-color: transparent;
-  padding: 10px;
-`;
-const UlStyle = styled.ul`
-  padding: 40px;
-  li {
-    margin: 20px 0;
-  }
-`;
+export default Sidebar;

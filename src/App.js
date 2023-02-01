@@ -21,7 +21,7 @@ export default function App() {
       <Router>
         <Switch>
 
-          {/* Login */}
+          {/* Task */}
           <Route path="/task">
             <TaskManagement />
           </Route>

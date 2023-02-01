@@ -4,9 +4,8 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 // Components
-import Sidebar from "../Nav/Sidebar";
+import Sidebar from "./MobileSideBar";
 import Backdrop from "../Elements/Backdrop";
-import FullButton from "../Buttons/FullButton";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
