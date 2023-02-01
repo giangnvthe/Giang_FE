@@ -40,6 +40,10 @@ a:hover {
   color: #fd9309;
 }
 
+h1:hover {
+  color: black;
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 50px #fff inset;
   /* Change the color to your own background color */
@@ -374,22 +378,30 @@ main{
   display: flex;
   color: #fff;
   padding: 20px 15px;
-  gap: 15px;
+  gap: 20px;
   border-radius: 10px;
   transition: all 0.3s;
 }
-.sidebar_link:hover{
-  background:#fd9309;
+.sidebar_link:hover {
+  background:#FFD495;
   color: #000;
+  transition: all 0.3s;
+}
+.sidebar_link:hover .sidebar_link_text {
+  color: #fd9309;
+  transition: all 0.3s;
+}
+.sidebar_link:hover .sidebar_icon {
+  color: #fd9309;
   transition: all 0.3s;
 }
 .sidebar_active{
   background: #fd9309;
-  color: #000;
 }
 .sidebar_link_text{
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #434242;
+  font-weight: 400;
 }
 .sidebar_icon {
   font-size: 1rem;

@@ -31,7 +31,7 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <RouterLink className="pointer flexNullCenter" to="/" smooth={true}>
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+            <h1 style={{ marginLeft: "15px", color: "black" }} className="font20 extraBold">
               FollabiJ
             </h1>
           </RouterLink>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
     FaTh,
-    FaBars,
+    FaRegCommentAlt,
     FaUserAlt,
     FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
+    FaVideo,
+    FaPencilAlt,
+    FaFolder
 } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { Link as RouterLink } from "react-router-dom";
@@ -14,6 +14,7 @@ import Font from '../Font/Font';
 
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
+import { hover } from '@testing-library/user-event/dist/hover';
 
 const Sidebar = ({ children }) => {
     const menuItem = [
@@ -24,38 +25,43 @@ const Sidebar = ({ children }) => {
         },
         {
             path: "/about",
-            name: "About",
-            icon: <FaUserAlt />
+            name: "Chat",
+            icon: <FaRegCommentAlt />
         },
         {
             path: "/analytics",
-            name: "Analytics",
+            name: "Event",
             icon: <FaRegChartBar />
         },
         {
             path: "/comment",
-            name: "Comment",
-            icon: <FaCommentAlt />
+            name: "Meeting",
+            icon: <FaVideo />
+        },
+        {
+            path: "/notes",
+            name: "Notes",
+            icon: <FaPencilAlt />
         },
         {
             path: "/product",
-            name: "Product",
-            icon: <FaShoppingBag />
+            name: "Files",
+            icon: <FaFolder />
         },
         {
             path: "/productList",
-            name: "Product List",
-            icon: <FaThList />
+            name: "About Project",
+            icon: <FaUserAlt />
         }
     ]
     return (
         <>     <Font />
         <div className="sidebarContainer">
-            <div style={{ width: "250px" }} className="sidebar_sidebar">
+            <div style={{ width: "300px"}} className="sidebar_sidebar">
                 <div className="sidebar_top_section">
                     <RouterLink className="pointer flexNullCenter" to="/">
                         <LogoIcon />
-                        <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+                        <h1 style={{ marginLeft: "15px", color: "black",   fontFamily: "'Khula', sans-serif"}} className="font20 extraBold">
                             FollabiJ
                         </h1>
                     </RouterLink>
