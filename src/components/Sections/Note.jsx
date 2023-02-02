@@ -4,9 +4,9 @@ import styled from "styled-components";
 import NoteBox from "../Elements/NoteBox";
 import FullButton from "../Buttons/FullButton";
 
-export default function Blog() {
+export default function Note() {
   return (
-    <Wrapper id="note">
+    <Wrapper id="notes">
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>

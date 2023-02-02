@@ -129,7 +129,7 @@ body {
 }
 
 .shadow {
-  box-shadow: 0 0 11px rgba(237, 232, 237, 0.5);
+  box-shadow: 0 0 11px rgba(58, 55, 58, 0.5);
   -webkit-box-shadow: 0 0 11px rgba(237, 232, 237, 0.5);
   -moz-box-shadow: 0 0 11px rgba(237, 232, 237, 0.5);
 }
@@ -361,7 +361,7 @@ main{
   background: #F5B17B;
   color: #fff;
   min-height: 100vh;
-  width: 100px;
+  min-width: 300px;
   border-right: 10px solid #F5B17B;
 }
 .sidebar_top_section{
@@ -381,6 +381,7 @@ main{
   gap: 20px;
   border-radius: 10px;
   transition: all 0.3s;
+  box-shadow:  1px 1px 4px #fd9300;
 }
 .sidebar_link:hover {
   background:#FFD495;

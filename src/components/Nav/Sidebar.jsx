@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     FaTh,
     FaRegCommentAlt,
@@ -14,7 +14,6 @@ import Font from '../Font/Font';
 
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
-import { hover } from '@testing-library/user-event/dist/hover';
 
 const Sidebar = ({ children }) => {
     const menuItem = [

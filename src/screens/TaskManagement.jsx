@@ -1,6 +1,6 @@
 import Kanban from "../components/Sections/Kanban";
 import Sidebar from "../components/Nav/Sidebar";
-import Landing from "../screens/Landing"
+import Note from "../components/Sections/Note";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,14 +13,17 @@ import {
 export default function TaskManagement() {
   return (
     <Router>
-     
+
       <Sidebar>
         <Switch>
           {/* Task */}
           <Route path="/task">
             <Kanban />
           </Route>
-
+          {/* Task */}
+          <Route path="/notes">
+            <Note />
+          </Route>
 
         </Switch>
       </Sidebar>

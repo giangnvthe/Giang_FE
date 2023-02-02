@@ -166,6 +166,7 @@ const BoardSection = styled.div`
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
+    box-shadow:  5px 5px 5px #ded5c1;
 `
 
 const SectionTitle = styled.div`
