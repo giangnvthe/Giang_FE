@@ -11,7 +11,8 @@ const mockData = [
         tasks: [
             {
                 id: uuid(),
-                title: 'create report 4'
+                title: 'create report 4',
+                assignee: 'John'
             }
         ]
     },
@@ -22,14 +23,17 @@ const mockData = [
             {
                 id: uuid(),
                 title: 'Developing frontend',
+                assignee: 'John'
             },
             {
                 id: uuid(),
                 title: 'Creating report 2',
+                assignee: 'Bill'
             },
             {
                 id: uuid(),
                 title: 'Creating report 3',
+                assignee: 'Zack'
             },
         ]
     },
@@ -50,6 +54,7 @@ export default function Kanban() {
         if(!result.destination) return;
         const { source, destination } = result;
 
+        //move to task to other column
         if (source.droppableId !== destination.droppableId) {
             const sourceColIndex = data.findIndex(e => e.id === source.droppableId)
             const destinationColIndex = data.findIndex(e => e.id === destination.droppableId)
@@ -67,7 +72,22 @@ export default function Kanban() {
             data[destinationColIndex].tasks = destinationTasks
             
             setData(data)
-        }    
+        }    else { //move task in the one column
+            const columnIndex = data.findIndex(e => e.id === destination.droppableId);
+
+            const column = data[columnIndex]
+
+            const tasks = [...column.tasks]
+            console.log(tasks)
+
+            const [removed] = tasks.splice(source.index, 1)
+            tasks.splice(destination.index,0, removed)
+            console.log(tasks)
+
+            data[columnIndex].tasks = tasks
+
+            setData(data)
+        }
 
     }
 
@@ -108,7 +128,8 @@ export default function Kanban() {
                                                                 }}
                                                             >
                                                                 <Card>
-                                                                    {task.title}
+                                                                    <div>{task.title}</div>
+                                                                    <div>{task.assignee}</div>
                                                                 </Card>
                                                             </div>
                                                         )}
